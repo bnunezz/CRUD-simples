@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
+    <script src="https://get.mavo.io/mavo.js"></script>
+</head>
+<body mv-app="todo" mv-storage="local" mv-mode="edit">
+    <header>
+        <h1>Usuários</h1>
+        <p>[count(done)] Selecionados de [count(Usuário)]</p>
+    </header>
+
+    <ul>
+        <li property="Usuário" mv-multiple>
+            <label>
+                <input property="done" type="checkbox">
+                <span property="Nome do Usuário"></span>
+
+            </label>
+
+        </li>
+        <button mv-action="delete(Usuário where done)">Excluir</button>
+    </ul>
+    
+</body>
+</html>
